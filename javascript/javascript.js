@@ -13,11 +13,11 @@
 
   var name = "";
   var destination = "";
-  var time = MM/DD/YYYY;
+  var time = 0;
   var frequency = 0;
 
 
-  $("#click-button").on("click", function() {
+  $("#add-user").on("click", function() {
       event.preventDefault();
 
       name = $("#name-input").val().trim();
@@ -40,7 +40,10 @@
       console.log(snapshot.val().time);
       console.log(snapshot.val().frequency);
 
-      $("#recent-team").html(snapshot.val().name + " | " + snapshot.val().destination + " | " + snapshot.val().frequency);
+      $("#name-display").html(snapshot.val().name);
+      $("#destination-display").html(snapshot.val().destination);
+      $("#time-display").html(snapshot.val().time);
+      $("#frequency-display").html(snapshot.val().frequency);
 
   }, function(errorObject) {
   console.log("The read failed: " + errorObject.code);
