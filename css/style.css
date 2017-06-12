@@ -1,0 +1,23 @@
+body {
+	background:#eeeeee;
+	margin:10px;
+	/*border-radius:5px;*/
+
+}
+
+.jumbotron {
+  text-align: center;
+  font-family: 'Bungee Outline', cursive;
+  text-shadow: 2px 3px 4px red;
+  background-image: url(../images/herd1.jpeg);
+  background-position: 0% 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#well-section {
+	text-align: center;
+	display: block;
+	text-indent: inherit;
+
+}
