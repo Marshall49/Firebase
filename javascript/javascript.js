@@ -17,7 +17,7 @@
   var frequency = 0;
 
 
-  $("#add-user").on("click", function() {
+  $("#add-user").on("click", function(event) {
       event.preventDefault();
 
       name = $("#name-input").val().trim();
