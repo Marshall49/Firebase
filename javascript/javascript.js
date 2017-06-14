@@ -1,14 +1,17 @@
-  var config = {
-    apiKey: "AIzaSyAHLYF3q1qvRQBxe0G9oAM05E9FLzLJz3c",
-    authDomain: "fir-assignment-d0b8b.firebaseapp.com",
-    databaseURL: "https://fir-assignment-d0b8b.firebaseio.com",
-    projectId: "fir-assignment-d0b8b",
-    storageBucket: "fir-assignment-d0b8b.appspot.com",
-    messagingSenderId: "558398321544"
-  };
-  firebase.initializeApp(config);
+console.log("")
+var config = {
+  apiKey: "AIzaSyAHLYF3q1qvRQBxe0G9oAM05E9FLzLJz3c",
+  authDomain: "fir-assignment-d0b8b.firebaseapp.com",
+  databaseURL: "https://fir-assignment-d0b8b.firebaseio.com",
+  projectId: "fir-assignment-d0b8b",
+  storageBucket: "fir-assignment-d0b8b.appspot.com",
+  messagingSenderId: "558398321544"
+};
+firebase.initializeApp(config);
+
 
   var database = firebase.database();
+  console.log(database);
 
 
   var name = "";
@@ -31,7 +34,6 @@
         time: time,
         frequency: frequency
       });
-    });
 
       database.ref().on("value", function(snapshot) {
       console.log(snapshot.val());
@@ -48,3 +50,4 @@
   }, function(errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
+    });
